@@ -27,10 +27,6 @@ import java.util.Set;
 // - checkBackupSpawn(): triggered when all initial enemies die mid-round
 // - endOfRound(): tick round-based effects, display status
 
-// DIP: Depends on TurnOrderStrategy, PlayerInputProvider, and BattleContext (all interfaces). No concrete UI or strategy classes are imported
-
-// OCP: New StatusEffects, Actions, and Strategies can be added without modifying this class
-
 // Implements BattleContext to expose a controlled interface to Actions/Skills
 
 public class BattleEngine implements BattleContext {
@@ -219,18 +215,8 @@ public class BattleEngine implements BattleContext {
 
     // For player actions that target an enemy, the target was already embedded into
     // the action by CLIGameUI
-    // (wrapped in ItemAction or SpecialSkillAction with the appropriate
-    // ActionContext targets)
     // For BasicAttack/SpecialSkillAction we return null here and let the action's
     // execute() handle it via context
-
-    // The actual target resolution for those cases is done in CLIGameUI before
-    // calling getPlayerAction(), which constructs the action with the target baked
-    // in
-    // Here we just return null as a sentinel; the context is rebuilt in processTurn
-
-    // In practice, CLIGameUI returns a PrebuiltAction that carries its own target -
-    // see TargetedAction wrapper below
 
     private Combatant resolvePlayerTarget(Action action) {
         if (action instanceof TargetedAction ta)
