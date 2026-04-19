@@ -3,14 +3,9 @@ package com.arena.model.combatant;
 import com.arena.model.skill.ArcaneBlast;
 import com.arena.model.skill.SpecialSkill;
 
-// Wizard player class
 // Stats: HP 200 | ATK 50 | DEF 10 | SPD 20
 // Special Skill: Arcane Blast - deals damage to ALL enemies currently in combat
-// Each enemy defeated by Arcane Blast (including Power Stone trigger) adds +10
-// to the Wizard's attack, lasting until end of the level
-// The attack bonus accumulates in arcaneBlastBonus and is included in
-// getEffectiveAttack() via the overridden method
-// LSP: Wizard is a fully substitutable Player/Combatant
+// Each enemy defeated by Arcane Blast (including Power Stone trigger) adds +10 to the Wizard's attack, lasting until end of the level
 
 public class Wizard extends Player {
 
