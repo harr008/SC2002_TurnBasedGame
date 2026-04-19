@@ -5,8 +5,6 @@ import com.arena.model.combatant.Enemy;
 import java.util.List;
 
 // Immutable data class describing a level's enemy configuration
-
-// SRP: Holds only configuration data - no game logic
 // Factory pattern creates these via LevelFactory
 public class LevelConfig {
 
