@@ -3,10 +3,6 @@ package com.arena.model.effect;
 import com.arena.model.combatant.Combatant;
 
 // Represents a persistent status effect on a combatant
-
-// OCP: New effect types (e.g. Poison, Freeze) can be added without modifying BattleEngine or Combatant
-
-// ISP: Only the methods each effect type actually needs are declared here
 // Effects that don't modify stats simply return 0
 
 public interface StatusEffect {
