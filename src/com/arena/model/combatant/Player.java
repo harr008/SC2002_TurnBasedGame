@@ -5,16 +5,6 @@ import com.arena.model.skill.SpecialSkill;
 import java.util.ArrayList;
 import java.util.List;
 
-// Abstract Player class - extends Combatant with inventory and special-skill cooldown
-// SRP: Manages player-specific state (inventory, cooldown) separately from
-// combat mechanics (which live in Combatant and Action classes)
-// Cooldown logic:
-// - Recorded as the round in which the skill was last used
-// - isSpecialSkillReady(round) returns true when (round >= lastUsedRound + 3)
-// - Display cooldown = Math.max(0, lastUsedRound + 3 - currentRound)
-// - This correctly shows 3 rounds remaining immediately after use and 0 on
-// the round the skill becomes available again, matching Appendix A examples
-
 public abstract class Player extends Combatant {
 
     private final List<Item> inventory;
