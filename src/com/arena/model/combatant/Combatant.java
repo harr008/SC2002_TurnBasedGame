@@ -6,13 +6,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-// Abstract base class for all battle participants (players and enemies)
-// Encapsulates shared state: HP, base stats, and the list of active StatusEffects
-// getEffectiveAttack() and getEffectiveDefense() dynamically apply effect modifiers,
-// satisfying OCP: new effects are picked up without changing this class
-// LSP: Player and Enemy are fully interchangeable wherever a Combatant is expected
-// (e.g. TurnOrderStrategy, BasicAttackAction target)
-
 public abstract class Combatant {
 
     protected final String name;
