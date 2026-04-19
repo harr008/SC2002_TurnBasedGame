@@ -5,14 +5,6 @@ import com.arena.model.combatant.Combatant;
 
 import java.util.List;
 
-
-//  Data object passed to every Action.execute() call
-
-//  SRP: Bundles actor, targets, and BattleContext into one parameter
-//  so Action signatures stay clean and stable
-
-//  DIP: Actions depend on BattleContext (abstraction), not BattleEngine directly
-
 public class ActionContext {
 
     private final Combatant actor;
