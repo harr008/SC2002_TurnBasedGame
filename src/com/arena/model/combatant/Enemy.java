@@ -3,11 +3,6 @@ package com.arena.model.combatant;
 import com.arena.strategy.BasicAttackStrategy;
 import com.arena.strategy.EnemyActionStrategy;
 
-// Abstract Enemy class - extends Combatant with pluggable action strategy
-// Holds an EnemyActionStrategy (Strategy Pattern) so enemy behaviour can
-// be changed at runtime or extended without modifying existing code
-// LSP: Enemy is fully substitutable wherever Combatant is expected
-
 public abstract class Enemy extends Combatant {
 
     private EnemyActionStrategy actionStrategy;
