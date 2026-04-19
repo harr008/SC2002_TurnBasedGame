@@ -3,11 +3,8 @@ package com.arena.model.combatant;
 import com.arena.model.skill.ShieldBash;
 import com.arena.model.skill.SpecialSkill;
 
-// Warrior player class
 // Stats: HP 260 | ATK 40 | DEF 20 | SPD 30
-// Special Skill: Shield Bash - deals BasicAttack damage to one enemy
-// and stuns it for its remaining turns this round plus its next round's turn
-// LSP: Warrior is a fully substitutable Player/Combatant
+// Special Skill: Shield Bash - deals BasicAttack damage to one enemy and stuns it for its remaining turns this round plus its next round's turn
 
 public class Warrior extends Player {
 
